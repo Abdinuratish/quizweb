@@ -1,6 +1,6 @@
 const quizData = [
     {
-        question: "Which language runs in a web browser?",
+        question: "Luuqaddee ayaa ku shaqeysa biraawsar?",
         a: "Java",
         b: "C",
         c: "Python",
@@ -8,7 +8,7 @@ const quizData = [
         correct: "d",
     },
     {
-        question: "What does CSS stand for?",
+        question: "Waa maxay micnaha CSS?",
         a: "Central Style Sheets",
         b: "Cascading Style Sheets",
         c: "Cascading Simple Sheets",
@@ -16,19 +16,19 @@ const quizData = [
         correct: "b",
     },
     {
-        question: "What does HTML stand for?",
+        question: "Waa maxay micnaha HTML?",
         a: "Hypertext Markup Language",
         b: "Hypertext Markdown Language",
         c: "Hyperloop Machine Language",
-        d: "Helicopters Terminals Motorboats Lamborginis",
+        d: "Helicopters Terminals Motorboats Lamborghinis",
         correct: "a",
     },
     {
-        question: "What year was JavaScript launched?",
+        question: "Sanaddee ayaa JavaScript la bilaabay?",
         a: "1996",
         b: "1995",
         c: "1994",
-        d: "none of the above",
+        d: "midna ma ahan",
         correct: "b",
     },
 ];
@@ -67,7 +67,7 @@ function getSelected() {
     let answer
 
     answerEls.forEach(answerEl => {
-        if(answerEl.checked) {
+        if (answerEl.checked) {
             answer = answerEl.id
         }
     })
@@ -77,21 +77,20 @@ function getSelected() {
 
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
-    
-    if(answer) {
-        if(answer === quizData[currentQuiz].correct) {
+
+    if (answer) {
+        if (answer === quizData[currentQuiz].correct) {
             score++
         }
 
         currentQuiz++
 
-        if(currentQuiz < quizData.length) {
+        if (currentQuiz < quizData.length) {
             loadQuiz()
         } else {
             quiz.innerHTML = `
-                <h2>You answered ${score}/${quizData.length} questions correctly</h2>
-
-                <button onclick="location.reload()">Reload</button>
+                <h2>Waxaad si sax ah uga jawaabtay ${score}/${quizData.length} su'aalood</h2>
+                <button onclick="location.reload()">Dib u bilow</button>
             `
         }
     }
