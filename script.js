@@ -1,6 +1,6 @@
 const quizData = [
     {
-        question: "Luuqaddee ayaa ku shaqeysa biraawsar?",
+        question: "Luuqaddee ayaa ku shaqeysa browser?",
         a: "Java",
         b: "C",
         c: "Python",
